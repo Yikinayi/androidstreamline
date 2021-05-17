@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.view.View
 import androidx.fragment.app.Fragment
 import java.io.ByteArrayOutputStream
 
@@ -54,3 +55,4 @@ fun Context?.getAssetsFileString(name: String, bufferSize: Int = 128): String? {
     }
     return null
 }
+

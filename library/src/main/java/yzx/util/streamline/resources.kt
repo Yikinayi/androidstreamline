@@ -22,4 +22,21 @@ fun Int?.toResourceDrawable(): Drawable? {
 }
 
 
+fun Int.toDP(): Int {
+    return (application.resources.displayMetrics.density * this + 0.5f).toInt()
+}
+
+fun Float.toDP(): Float {
+    return application.resources.displayMetrics.density * this
+}
+
+
+fun Int.toPX(): Int {
+    return (this / application.resources.displayMetrics.density + 0.5f).toInt()
+}
+
+
+fun Float.toPX(): Float {
+    return this / application.resources.displayMetrics.density
+}
 

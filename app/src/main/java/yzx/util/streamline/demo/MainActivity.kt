@@ -2,7 +2,9 @@ package yzx.util.streamline.demo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import yzx.util.streamline.Streamline
+import yzx.util.streamline.getAssetsFileString
 import yzx.util.streamline.toResourceDrawable
 
 
@@ -12,10 +14,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Streamline.init(this.application)
 
-        val d = R.drawable.ic_launcher_background.toResourceDrawable()
-        window.decorView.setBackgroundDrawable(d)
+        findViewById<TextView>(R.id.tv).text = getAssetsFileString("fuck.txt")
+
 
     }
 
